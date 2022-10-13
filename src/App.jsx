@@ -4,12 +4,14 @@ import SingleQuote from './components/SingleQuote';
 import useQuote from './hooks/useQuote';
 import useQuoteFilter from './hooks/useQuoteFilter';
 
+import style from './App.module.css';
+
 const App = () => {
   const { quoteFilter, resetFilter, setAuthor, setPage } = useQuoteFilter();
   const { quote, setLoading } = useQuote(quoteFilter);
 
   return (
-    <div>
+    <div className={style.main}>
       <button
         onClick={() => {
           resetFilter();

@@ -1,0 +1,11 @@
+@font-face {
+  font-family: Raleway;
+  src: url('/assets/fonts/Raleway-SemiBold.woff') format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url('/assets/fonts/Raleway-Bold.woff') format('woff');
+  font-weight: bold;
+}
