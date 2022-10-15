@@ -13,12 +13,15 @@ const App = () => {
   return (
     <div className={style.main}>
       <button
+        aria-label='get a new random quote'
+        className={style.refreshButton}
         onClick={() => {
           resetFilter();
           setLoading();
         }}
       >
-        Refresh <RefreshIcon width='24px' />
+        <span>Refresh</span>
+        <RefreshIcon width='24px' />
       </button>
       {quoteFilter.limit === 1 && (
         <SingleQuote
