@@ -1,0 +1,11 @@
+:root {
+  --very-dark-gray: rgb(51, 51, 51);
+  --dark-gray: rgb(79, 79, 79);
+  --light-gray: rgb(130, 130, 130);
+  --very-light-gray: rgb(242, 242, 242);
+  --light-orange: rgb(247, 223, 148);
+}
+
+body {
+  background-color: var(--very-light-gray);
+}
