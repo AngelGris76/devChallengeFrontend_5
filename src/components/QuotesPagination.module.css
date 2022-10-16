@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .paginationButton {
@@ -17,4 +18,8 @@
 
   border-radius: 50%;
   border: none;
+}
+
+.paginationButton:disabled {
+  background-color: var(--light-gray);
 }

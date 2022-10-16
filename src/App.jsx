@@ -11,38 +11,41 @@ const App = () => {
   const { quote, setLoading } = useQuote(quoteFilter);
 
   return (
-    <div className={style.main}>
-      <button
-        aria-label='get a new random quote'
-        className={style.refreshButton}
-        onClick={() => {
-          resetFilter();
-          setLoading();
-        }}
-      >
-        <span>Refresh</span>
-        <RefreshIcon width='24px' />
-      </button>
-      {quoteFilter.limit === 1 && (
-        <SingleQuote
-          isLoading={quote.isLoading}
-          quote={quote.data}
-          setAuthor={(author) => {
-            setAuthor(author);
+    <>
+      <div className={style.main}>
+        <button
+          aria-label='get a new random quote'
+          className={style.refreshButton}
+          onClick={() => {
+            resetFilter();
             setLoading();
           }}
-        />
-      )}
-      {quoteFilter.limit > 1 && (
-        <QuoteList
-          quotes={quote}
-          setPage={(page) => {
-            setPage(page);
-            setLoading();
-          }}
-        />
-      )}
-    </div>
+        >
+          <span>Refresh</span>
+          <RefreshIcon width='24px' />
+        </button>
+        {quoteFilter.limit === 1 && (
+          <SingleQuote
+            isLoading={quote.isLoading}
+            quote={quote.data}
+            setAuthor={(author) => {
+              setAuthor(author);
+              setLoading();
+            }}
+          />
+        )}
+        {quoteFilter.limit > 1 && (
+          <QuoteList
+            quotes={quote}
+            setPage={(page) => {
+              setPage(page);
+              setLoading();
+            }}
+          />
+        )}
+        <footer className={style.footer}>Created by Sebastian Smuraglia</footer>
+      </div>
+    </>
   );
 };
 
